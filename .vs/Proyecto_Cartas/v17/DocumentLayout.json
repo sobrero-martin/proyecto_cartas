@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Programming\\godot\\proyecto_cartas\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{27CD9BB3-482D-4B05-B2C4-53F4F7850840}|Proyecto_Cartas.csproj|d:\\programming\\godot\\proyecto_cartas\\proyecto_cartas.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{27CD9BB3-482D-4B05-B2C4-53F4F7850840}|Proyecto_Cartas.csproj|solutionrelative:proyecto_cartas.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Proyecto_Cartas.csproj",
+              "DocumentMoniker": "D:\\Programming\\godot\\proyecto_cartas\\Proyecto_Cartas.csproj",
+              "RelativeDocumentMoniker": "Proyecto_Cartas.csproj",
+              "ToolTip": "D:\\Programming\\godot\\proyecto_cartas\\Proyecto_Cartas.csproj",
+              "RelativeToolTip": "Proyecto_Cartas.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-23T14:27:57.895Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

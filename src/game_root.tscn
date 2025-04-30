@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3ruvh3tnqvak"]
+
+[ext_resource type="PackedScene" uid="uid://dmg43fmef58hm" path="res://src/login_screen.tscn" id="1_65u1q"]
+
+[node name="GameRoot" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LoginScreen" parent="." instance=ExtResource("1_65u1q")]
+
+[node name="MainUI" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

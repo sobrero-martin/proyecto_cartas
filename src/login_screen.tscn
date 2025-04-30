@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmg43fmef58hm"]
+
+[ext_resource type="Theme" uid="uid://cqjecd71y6w2q" path="res://ui/themes/button_theme.tres" id="1_wplbs"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_wplbs"]
+script/source = "using Godot;
+using System;
+
+public partial class LoginScreen : Control
+{
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+}
+"
+
+[node name="LoginScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1080.0
+offset_bottom = 1920.0
+script = SubResource("CSharpScript_wplbs")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 1920.0
+color = Color(0.114897, 0.114897, 0.114897, 1)
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 2
+offset_left = 332.0
+offset_top = 264.0
+offset_right = 749.0
+offset_bottom = 347.0
+theme_override_font_sizes/font_size = 60
+text = "Login/Register"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -208.0
+offset_top = 997.0
+offset_right = 209.0
+offset_bottom = 1162.0
+grow_horizontal = 2
+scale = Vector2(1, 1.0248)
+theme_override_constants/separation = 30
+
+[node name="UsernameField" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_wplbs")
+theme_override_font_sizes/font_size = 40
+placeholder_text = "Username"
+
+[node name="PasswordField" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_wplbs")
+theme_override_font_sizes/font_size = 40
+placeholder_text = "Password"
+secret = true
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_wplbs")
+theme_override_constants/margin_top = 40
+
+[node name="LoginButton" type="Button" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("1_wplbs")
+theme_override_font_sizes/font_size = 40
+text = "Login"
