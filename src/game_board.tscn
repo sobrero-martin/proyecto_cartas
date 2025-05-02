@@ -1,0 +1,206 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2urtcl0udr46"]
+
+[sub_resource type="Theme" id="Theme_jgywa"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jgywa"]
+
+[sub_resource type="Theme" id="Theme_5sl6o"]
+
+[node name="GameBoard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1080, 1920)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.157274, 0.157274, 0.157274, 1)
+metadata/_edit_lock_ = true
+
+[node name="Board" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -329.0
+offset_top = 314.0
+offset_right = 329.0
+offset_bottom = 1072.0
+grow_horizontal = 2
+
+[node name="EnemyBoard" type="HBoxContainer" parent="Board"]
+layout_mode = 2
+
+[node name="ECard1" type="Panel" parent="Board/EnemyBoard"]
+custom_minimum_size = Vector2(150, 300)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Board/EnemyBoard"]
+custom_minimum_size = Vector2(10, 0)
+layout_direction = 3
+layout_mode = 2
+theme_override_constants/margin_left = 100
+
+[node name="ECard2" type="Panel" parent="Board/EnemyBoard/MarginContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme = SubResource("Theme_jgywa")
+
+[node name="MarginContainer2" type="MarginContainer" parent="Board/EnemyBoard"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+
+[node name="ECard3" type="Panel" parent="Board/EnemyBoard/MarginContainer2"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Board"]
+layout_mode = 2
+theme_override_constants/margin_top = 150
+
+[node name="PlayerBoard" type="HBoxContainer" parent="Board"]
+layout_mode = 2
+
+[node name="PCard1" type="Panel" parent="Board/PlayerBoard"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Board/PlayerBoard"]
+custom_minimum_size = Vector2(10, 0)
+layout_direction = 3
+layout_mode = 2
+theme_override_constants/margin_left = 100
+
+[node name="PCard2" type="Panel" parent="Board/PlayerBoard/MarginContainer"]
+custom_minimum_size = Vector2(150, 300)
+layout_mode = 2
+theme = SubResource("Theme_jgywa")
+
+[node name="MarginContainer2" type="MarginContainer" parent="Board/PlayerBoard"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+
+[node name="PCard3" type="Panel" parent="Board/PlayerBoard/MarginContainer2"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="Hand" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -462.5
+offset_top = -556.0
+offset_right = 462.5
+offset_bottom = -210.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="PlayerBoard" type="HBoxContainer" parent="Hand"]
+layout_mode = 2
+
+[node name="PCard1" type="Panel" parent="Hand/PlayerBoard"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Hand/PlayerBoard"]
+custom_minimum_size = Vector2(10, 0)
+layout_direction = 3
+layout_mode = 2
+theme_override_constants/margin_left = 100
+
+[node name="PCard2" type="Panel" parent="Hand/PlayerBoard/MarginContainer"]
+custom_minimum_size = Vector2(150, 300)
+layout_mode = 2
+theme = SubResource("Theme_jgywa")
+
+[node name="MarginContainer2" type="MarginContainer" parent="Hand/PlayerBoard"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+
+[node name="PCard3" type="Panel" parent="Hand/PlayerBoard/MarginContainer2"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="Hand/PlayerBoard"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 0
+
+[node name="Panel" type="Panel" parent="Hand/PlayerBoard/MarginContainer3"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 654.0
+offset_top = 1732.0
+offset_right = 991.0
+offset_bottom = 1834.0
+text = "End Turn"
+
+[node name="PlayerHealth" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 1734.0
+offset_right = 376.0
+offset_bottom = 1860.0
+
+[node name="Panel" type="Panel" parent="PlayerHealth"]
+modulate = Color(0.833387, 0, 0.107743, 0.25098)
+self_modulate = Color(1, 0.00392157, 0, 1)
+material = SubResource("ShaderMaterial_jgywa")
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme = SubResource("Theme_5sl6o")
+
+[node name="MarginContainer" type="MarginContainer" parent="PlayerHealth"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+
+[node name="Panel2" type="Panel" parent="PlayerHealth/MarginContainer"]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="PlayerHealth"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+
+[node name="Panel2" type="Panel" parent="PlayerHealth/MarginContainer2"]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+
+[node name="EnemyHealth" type="HBoxContainer" parent="."]
+offset_left = 718.0
+offset_top = 64.0
+offset_right = 1050.0
+offset_bottom = 190.0
+
+[node name="Panel" type="Panel" parent="EnemyHealth"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="EnemyHealth"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+
+[node name="Panel2" type="Panel" parent="EnemyHealth/MarginContainer"]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="EnemyHealth"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+
+[node name="Panel2" type="Panel" parent="EnemyHealth/MarginContainer2"]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
