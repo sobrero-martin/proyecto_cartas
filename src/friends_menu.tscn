@@ -1,0 +1,167 @@
+[gd_scene format=3 uid="uid://c8vtvq33tehpg"]
+
+[node name="FriendsMenu" type="Control"]
+custom_minimum_size = Vector2(1080, 1720)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AddFriend" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -151.0
+offset_top = -144.0
+offset_right = 151.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 35
+text = "Add Friend"
+icon_alignment = 1
+
+[node name="FriendsScroll" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -400.0
+offset_top = 152.0
+offset_right = 541.0
+offset_bottom = 1526.0
+grow_horizontal = 2
+
+[node name="Friends" type="VBoxContainer" parent="FriendsScroll"]
+custom_minimum_size = Vector2(760, 0)
+layout_mode = 2
+
+[node name="Friend1" type="Button" parent="FriendsScroll/Friends"]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Pepe"
+alignment = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="FriendsScroll/Friends"]
+layout_mode = 2
+theme_override_constants/margin_top = 75
+
+[node name="Friend2" type="Button" parent="FriendsScroll/Friends/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Papitas23
+"
+alignment = 0
+
+[node name="MarginContainer2" type="MarginContainer" parent="FriendsScroll/Friends"]
+layout_mode = 2
+theme_override_constants/margin_top = 75
+
+[node name="Button" type="Button" parent="FriendsScroll/Friends/MarginContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Lautaro"
+alignment = 0
+
+[node name="MarginContainer3" type="MarginContainer" parent="FriendsScroll/Friends"]
+layout_mode = 2
+theme_override_constants/margin_top = 75
+
+[node name="Button" type="Button" parent="FriendsScroll/Friends/MarginContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Agustin"
+alignment = 0
+
+[node name="MarginContainer4" type="MarginContainer" parent="FriendsScroll/Friends"]
+layout_mode = 2
+theme_override_constants/margin_top = 75
+
+[node name="Button" type="Button" parent="FriendsScroll/Friends/MarginContainer4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Martin"
+alignment = 0
+
+[node name="MarginContainer5" type="MarginContainer" parent="FriendsScroll/Friends"]
+layout_mode = 2
+theme_override_constants/margin_top = 75
+
+[node name="Button" type="Button" parent="FriendsScroll/Friends/MarginContainer5"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Empanadas456"
+alignment = 0
+
+[node name="MarginContainer6" type="MarginContainer" parent="FriendsScroll/Friends"]
+layout_mode = 2
+theme_override_constants/margin_top = 75
+
+[node name="Button" type="Button" parent="FriendsScroll/Friends/MarginContainer6"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "PapuKiller23"
+alignment = 0
+
+[node name="MarginContainer7" type="MarginContainer" parent="FriendsScroll/Friends"]
+layout_mode = 2
+theme_override_constants/margin_top = 75
+
+[node name="Button" type="Button" parent="FriendsScroll/Friends/MarginContainer7"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Chaketero222"
+alignment = 0
+
+[node name="MarginContainer8" type="MarginContainer" parent="FriendsScroll/Friends"]
+layout_mode = 2
+theme_override_constants/margin_top = 75
+
+[node name="Button" type="Button" parent="FriendsScroll/Friends/MarginContainer8"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "TukiSapo"
+alignment = 0
+
+[node name="MarginContainer9" type="MarginContainer" parent="FriendsScroll/Friends"]
+layout_mode = 2
+theme_override_constants/margin_top = 75
+
+[node name="Button" type="Button" parent="FriendsScroll/Friends/MarginContainer9"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "ElMalignoMakieavelico"
+alignment = 0
+
+[node name="MarginContainer10" type="MarginContainer" parent="FriendsScroll/Friends"]
+layout_mode = 2
+theme_override_constants/margin_top = 75
+
+[node name="Button" type="Button" parent="FriendsScroll/Friends/MarginContainer10"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "ElPicante41"
+alignment = 0
+
+[node name="MarginContainer11" type="MarginContainer" parent="FriendsScroll/Friends"]
+layout_mode = 2
+theme_override_constants/margin_top = 75
+
+[node name="Button" type="Button" parent="FriendsScroll/Friends/MarginContainer11"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "PitusasFan"
+alignment = 0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 31.0
+offset_right = 535.0
+offset_bottom = 137.0
+theme_override_font_sizes/font_size = 100
+text = "Friend List"

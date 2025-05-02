@@ -35,7 +35,7 @@ public partial class MainUi : Control
 	
 	private void ButtonFriendsPressed(){
 		GD.Print("This is ButtonFriends");
-		
+		SwitchMenu(lastMenu, "FriendsMenu");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
