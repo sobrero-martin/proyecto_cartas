@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=3 uid="uid://dotgr8ccpm735"]
+
+[ext_resource type="Script" uid="uid://1e06323mlggr" path="res://scripts/MainUi.cs" id="1_ewp14"]
+[ext_resource type="PackedScene" uid="uid://byqpxhdyvlbjk" path="res://src/main_menu.tscn" id="1_qog1u"]
+[ext_resource type="PackedScene" uid="uid://cfv0ln2234dsw" path="res://src/shop_menu.tscn" id="2_ewp14"]
+
+[node name="MainUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ewp14")
+
+[node name="UIContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(1080, 1920)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CurrentMenu" type="Control" parent="UIContainer"]
+custom_minimum_size = Vector2(1080, 1720)
+layout_mode = 2
+
+[node name="MainMenu" parent="UIContainer/CurrentMenu" instance=ExtResource("1_qog1u")]
+layout_mode = 1
+
+[node name="ShopMenu" parent="UIContainer/CurrentMenu" instance=ExtResource("2_ewp14")]
+visible = false
+layout_mode = 1
+
+[node name="InvMenu" type="Control" parent="UIContainer/CurrentMenu"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="FriendsMenu" type="Control" parent="UIContainer/CurrentMenu"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NavBar" type="HBoxContainer" parent="UIContainer"]
+custom_minimum_size = Vector2(1080, 200)
+layout_mode = 2
+
+[node name="ButtonMain" type="Button" parent="UIContainer/NavBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+text = "Main"
+
+[node name="ButtonInv" type="Button" parent="UIContainer/NavBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+text = "Inventory"
+
+[node name="ButtonFriends" type="Button" parent="UIContainer/NavBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+text = "Friends"
+
+[node name="ButtonShop" type="Button" parent="UIContainer/NavBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+text = "Shop"
+
+[connection signal="pressed" from="UIContainer/NavBar/ButtonMain" to="." method="ButtonMainPressed"]
+[connection signal="pressed" from="UIContainer/NavBar/ButtonInv" to="." method="ButtonInvPressed"]
+[connection signal="pressed" from="UIContainer/NavBar/ButtonFriends" to="." method="ButtonFriendsPressed"]
+[connection signal="pressed" from="UIContainer/NavBar/ButtonShop" to="." method="ButtonShopPressed"]

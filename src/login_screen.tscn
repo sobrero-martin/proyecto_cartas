@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmg43fmef58hm"]
+[gd_scene load_steps=3 format=3 uid="uid://dmg43fmef58hm"]
 
+[ext_resource type="Script" uid="uid://4b0u1frgwg53" path="res://scripts/LoginScreen.cs" id="1_4mtvu"]
 [ext_resource type="Theme" uid="uid://cqjecd71y6w2q" path="res://ui/themes/button_theme.tres" id="1_wplbs"]
 
 [node name="LoginScreen" type="Control"]
@@ -7,6 +8,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1080.0
 offset_bottom = 1920.0
+script = ExtResource("1_4mtvu")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 0
@@ -59,3 +61,5 @@ layout_mode = 2
 theme = ExtResource("1_wplbs")
 theme_override_font_sizes/font_size = 40
 text = "Login"
+
+[connection signal="pressed" from="VBoxContainer/MarginContainer/LoginButton" to="." method="LoginButtonPressed"]
