@@ -1,0 +1,122 @@
+[gd_scene load_steps=10 format=3 uid="uid://cobqc3l4sbews"]
+
+[ext_resource type="Script" uid="uid://dml23cwtixwaf" path="res://script/inventoryScript.cs" id="1_23lyu"]
+[ext_resource type="Texture2D" uid="uid://ffpl88vc7s1p" path="res://images/background/background.jpg" id="1_nn6s1"]
+[ext_resource type="Texture2D" uid="uid://ckv0ien00ifc3" path="res://images/cards/image_card1.webp" id="1_pu2nn"]
+[ext_resource type="Theme" uid="uid://cq15hs3q31g5d" path="res://ui/themes/lb.tres" id="1_tfxhj"]
+[ext_resource type="Texture2D" uid="uid://di6jnj0kfgqif" path="res://images/cards/image_card2.webp" id="2_vp5w8"]
+[ext_resource type="Texture2D" uid="uid://d3cgcyi7anwf4" path="res://images/cards/image_card3.png" id="4_nn6s1"]
+[ext_resource type="Texture2D" uid="uid://dq186mu5e8k42" path="res://images/cards/image_card4.png" id="5_23lyu"]
+[ext_resource type="Texture2D" uid="uid://d2camk8ge5btt" path="res://images/cards/image_card5.png" id="6_om4ol"]
+[ext_resource type="Texture2D" uid="uid://dekfkidxqaewv" path="res://images/cards/image_card6.png" id="7_uo028"]
+
+[node name="Inventory" type="Control"]
+custom_minimum_size = Vector2(1080, 1920)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_23lyu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1080, 1920)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.114897, 0.114897, 0.114897, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1080, 1920)
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 1920.0
+texture = ExtResource("1_nn6s1")
+
+[node name="lbTitle" type="Label" parent="."]
+custom_minimum_size = Vector2(700, 200)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -350.0
+offset_top = 54.0
+offset_right = 350.0
+offset_bottom = 254.0
+grow_horizontal = 2
+theme = ExtResource("1_tfxhj")
+theme_override_font_sizes/font_size = 90
+text = "INVENTARIO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(900, 90)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -451.0
+offset_top = 287.0
+offset_right = 449.0
+offset_bottom = 737.0
+grow_horizontal = 2
+theme_override_constants/separation = 30
+
+[node name="bt_card1" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+texture_normal = ExtResource("1_pu2nn")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="bt_card2" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+texture_normal = ExtResource("2_vp5w8")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="bt_card3" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+texture_normal = ExtResource("4_nn6s1")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(900, 90)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -481.0
+offset_top = 793.0
+offset_right = 479.0
+offset_bottom = 1243.0
+grow_horizontal = 2
+theme_override_constants/separation = 30
+
+[node name="bt_card4" type="TextureButton" parent="HBoxContainer2"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+texture_normal = ExtResource("5_23lyu")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="bt_card5" type="TextureButton" parent="HBoxContainer2"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+texture_normal = ExtResource("6_om4ol")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="bt_card6" type="TextureButton" parent="HBoxContainer2"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+texture_normal = ExtResource("7_uo028")
+ignore_texture_size = true
+stretch_mode = 6
+
+[connection signal="pressed" from="HBoxContainer/bt_card1" to="." method="Card1"]
