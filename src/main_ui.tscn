@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://cicuo8dwnvyv4"]
 
 [ext_resource type="Script" uid="uid://1e06323mlggr" path="res://scripts/MainUi.cs" id="1_ewp14"]
-[ext_resource type="PackedScene" path="res://src/main_menu.tscn" id="1_qog1u"]
-[ext_resource type="PackedScene" path="res://src/shop_menu.tscn" id="2_ewp14"]
+[ext_resource type="PackedScene" uid="uid://byqpxhdyvlbjk" path="res://src/main_menu.tscn" id="1_qog1u"]
+[ext_resource type="PackedScene" uid="uid://cfv0ln2234dsw" path="res://src/shop_menu.tscn" id="2_ewp14"]
 [ext_resource type="PackedScene" uid="uid://c8vtvq33tehpg" path="res://src/friends_menu.tscn" id="4_ucu1h"]
 
 [node name="MainUI" type="Control"]
@@ -30,11 +30,13 @@ visible = false
 layout_mode = 1
 
 [node name="InvMenu" type="Control" parent="UIContainer/CurrentMenu"]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="FriendsMenu" parent="UIContainer/CurrentMenu" instance=ExtResource("4_ucu1h")]
+visible = false
 
 [node name="NavBar" type="HBoxContainer" parent="UIContainer"]
 custom_minimum_size = Vector2(1080, 200)
