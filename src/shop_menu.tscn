@@ -1,4 +1,4 @@
-[gd_scene load_steps=0 format=3 uid="uid://cfv0ln2234dsw"]
+[gd_scene format=3 uid="uid://cfv0ln2234dsw"]
 
 [node name="ShopMenu" type="Control"]
 layout_mode = 3
@@ -8,10 +8,299 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="."]
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1080, 1920)
 layout_mode = 0
-offset_left = 470.0
-offset_top = 136.0
-offset_right = 562.0
-offset_bottom = 159.0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.190762, 0.190762, 0.190762, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -207.0
+offset_top = 123.0
+offset_right = 221.0
+offset_bottom = 226.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 75
 text = "SHOPMENU"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -431.0
+offset_top = -659.0
+offset_right = 538.0
+offset_bottom = 577.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(100, 500)
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "COMPRAR"
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+
+[node name="Panel2" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(100, 500)
+layout_mode = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer/MarginContainer3"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "COMPRAR"
+
+[node name="MarginContainer4" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+custom_minimum_size = Vector2(100, 500)
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/MarginContainer2"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "COMPRAR"
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+
+[node name="Panel2" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+custom_minimum_size = Vector2(100, 500)
+layout_mode = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/MarginContainer3"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "COMPRAR"
+
+[node name="MarginContainer4" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3"]
+custom_minimum_size = Vector2(100, 500)
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3/MarginContainer2"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "COMPRAR"
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3"]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+
+[node name="Panel2" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3"]
+custom_minimum_size = Vector2(100, 500)
+layout_mode = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3/MarginContainer3"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "COMPRAR"
+
+[node name="MarginContainer4" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3"]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 500)
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "COMPRAR"
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+
+[node name="Panel2" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 500)
+layout_mode = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/MarginContainer3"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "COMPRAR"
+
+[node name="MarginContainer4" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(100, 500)
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2/MarginContainer2"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "COMPRAR"
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+
+[node name="Panel2" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(100, 500)
+layout_mode = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2/MarginContainer3"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "COMPRAR"
+
+[node name="MarginContainer4" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+custom_minimum_size = Vector2(100, 500)
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3/MarginContainer2"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "COMPRAR"
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+
+[node name="Panel2" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+custom_minimum_size = Vector2(100, 500)
+layout_mode = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3/MarginContainer3"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "COMPRAR"
+
+[node name="MarginContainer4" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_constants/margin_top = 50
