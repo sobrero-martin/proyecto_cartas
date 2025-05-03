@@ -1,16 +1,16 @@
 [gd_scene load_steps=10 format=3 uid="uid://cobqc3l4sbews"]
 
-[ext_resource type="Script" uid="uid://dml23cwtixwaf" path="res://script/inventoryScript.cs" id="1_23lyu"]
-[ext_resource type="Texture2D" uid="uid://ffpl88vc7s1p" path="res://images/background/background.jpg" id="1_nn6s1"]
-[ext_resource type="Texture2D" uid="uid://ckv0ien00ifc3" path="res://images/cards/image_card1.webp" id="1_pu2nn"]
-[ext_resource type="Theme" uid="uid://cq15hs3q31g5d" path="res://ui/themes/lb.tres" id="1_tfxhj"]
-[ext_resource type="Texture2D" uid="uid://di6jnj0kfgqif" path="res://images/cards/image_card2.webp" id="2_vp5w8"]
-[ext_resource type="Texture2D" uid="uid://d3cgcyi7anwf4" path="res://images/cards/image_card3.png" id="4_nn6s1"]
-[ext_resource type="Texture2D" uid="uid://dq186mu5e8k42" path="res://images/cards/image_card4.png" id="5_23lyu"]
-[ext_resource type="Texture2D" uid="uid://d2camk8ge5btt" path="res://images/cards/image_card5.png" id="6_om4ol"]
-[ext_resource type="Texture2D" uid="uid://dekfkidxqaewv" path="res://images/cards/image_card6.png" id="7_uo028"]
+[ext_resource type="Script" uid="uid://diuknryy85ssp" path="res://scripts/InvMenu.cs" id="1_2d61w"]
+[ext_resource type="Texture2D" uid="uid://ffpl88vc7s1p" path="res://images/background/background.jpg" id="2_h2111"]
+[ext_resource type="Theme" uid="uid://cq15hs3q31g5d" path="res://ui/themes/lb.tres" id="3_4ptbn"]
+[ext_resource type="Texture2D" uid="uid://ckv0ien00ifc3" path="res://images/cards/image_card1.webp" id="4_18iso"]
+[ext_resource type="Texture2D" uid="uid://di6jnj0kfgqif" path="res://images/cards/image_card2.webp" id="5_avgbg"]
+[ext_resource type="Texture2D" uid="uid://d3cgcyi7anwf4" path="res://images/cards/image_card3.png" id="6_lj55s"]
+[ext_resource type="Texture2D" uid="uid://dq186mu5e8k42" path="res://images/cards/image_card4.png" id="7_0ooo4"]
+[ext_resource type="Texture2D" uid="uid://d2camk8ge5btt" path="res://images/cards/image_card5.png" id="8_d3byc"]
+[ext_resource type="Texture2D" uid="uid://dekfkidxqaewv" path="res://images/cards/image_card6.png" id="9_yejko"]
 
-[node name="Inventory" type="Control"]
+[node name="InvMenu" type="Control"]
 custom_minimum_size = Vector2(1080, 1920)
 layout_mode = 3
 anchors_preset = 15
@@ -18,7 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_23lyu")
+script = ExtResource("1_2d61w")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(1080, 1920)
@@ -32,7 +32,7 @@ custom_minimum_size = Vector2(1080, 1920)
 layout_mode = 0
 offset_right = 1080.0
 offset_bottom = 1920.0
-texture = ExtResource("1_nn6s1")
+texture = ExtResource("2_h2111")
 
 [node name="lbTitle" type="Label" parent="."]
 custom_minimum_size = Vector2(700, 200)
@@ -45,7 +45,7 @@ offset_top = 54.0
 offset_right = 350.0
 offset_bottom = 254.0
 grow_horizontal = 2
-theme = ExtResource("1_tfxhj")
+theme = ExtResource("3_4ptbn")
 theme_override_font_sizes/font_size = 90
 text = "INVENTARIO"
 horizontal_alignment = 1
@@ -67,21 +67,21 @@ theme_override_constants/separation = 30
 [node name="bt_card1" type="TextureButton" parent="HBoxContainer"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
-texture_normal = ExtResource("1_pu2nn")
+texture_normal = ExtResource("4_18iso")
 ignore_texture_size = true
 stretch_mode = 6
 
 [node name="bt_card2" type="TextureButton" parent="HBoxContainer"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
-texture_normal = ExtResource("2_vp5w8")
+texture_normal = ExtResource("5_avgbg")
 ignore_texture_size = true
 stretch_mode = 6
 
 [node name="bt_card3" type="TextureButton" parent="HBoxContainer"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
-texture_normal = ExtResource("4_nn6s1")
+texture_normal = ExtResource("6_lj55s")
 ignore_texture_size = true
 stretch_mode = 6
 
@@ -101,21 +101,21 @@ theme_override_constants/separation = 30
 [node name="bt_card4" type="TextureButton" parent="HBoxContainer2"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
-texture_normal = ExtResource("5_23lyu")
+texture_normal = ExtResource("7_0ooo4")
 ignore_texture_size = true
 stretch_mode = 6
 
 [node name="bt_card5" type="TextureButton" parent="HBoxContainer2"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
-texture_normal = ExtResource("6_om4ol")
+texture_normal = ExtResource("8_d3byc")
 ignore_texture_size = true
 stretch_mode = 6
 
 [node name="bt_card6" type="TextureButton" parent="HBoxContainer2"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
-texture_normal = ExtResource("7_uo028")
+texture_normal = ExtResource("9_yejko")
 ignore_texture_size = true
 stretch_mode = 6
 
