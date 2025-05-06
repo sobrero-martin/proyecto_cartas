@@ -13,10 +13,9 @@ offset_bottom = 40.0
 script = ExtResource("1_ewp14")
 
 [node name="UIContainer" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(1080, 1920)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1080.0
+offset_bottom = 1924.0
 
 [node name="CurrentMenu" type="Control" parent="UIContainer"]
 custom_minimum_size = Vector2(1080, 1720)
@@ -24,10 +23,12 @@ layout_mode = 2
 
 [node name="MainMenu" parent="UIContainer/CurrentMenu" instance=ExtResource("1_qog1u")]
 layout_mode = 1
+offset_bottom = 0.0
 
 [node name="ShopMenu" parent="UIContainer/CurrentMenu" instance=ExtResource("2_ewp14")]
 visible = false
 layout_mode = 1
+offset_bottom = 0.160034
 
 [node name="InvMenu" type="Control" parent="UIContainer/CurrentMenu"]
 visible = false

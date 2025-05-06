@@ -1,18 +1,86 @@
-[gd_scene format=3 uid="uid://byqpxhdyvlbjk"]
+[gd_scene load_steps=5 format=3 uid="uid://byqpxhdyvlbjk"]
+
+[ext_resource type="Theme" uid="uid://cqjecd71y6w2q" path="res://ui/themes/button_theme.tres" id="1_bq8pk"]
+[ext_resource type="Script" uid="uid://bys2whldccwt1" path="res://scripts/MainMenu.cs" id="1_d3tmf"]
+[ext_resource type="Texture2D" uid="uid://dptolh6ap3h3q" path="res://ui/assets/profile_placeholder.png" id="2_6w7d7"]
+[ext_resource type="Texture2D" uid="uid://drr4k1jhn1d22" path="res://ui/assets/settings_cog.png" id="3_6w7d7"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = -200.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_d3tmf")
 
-[node name="Label" type="Label" parent="."]
+[node name="TopButtons" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 435.0
-offset_top = 156.0
-offset_right = 616.0
-offset_bottom = 249.0
-text = "MAINMENU
-"
+offset_right = 1080.0
+offset_bottom = 180.0
+
+[node name="ProfileContainer" type="MarginContainer" parent="TopButtons"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="ProfileButton" type="Button" parent="TopButtons/ProfileContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme = ExtResource("1_bq8pk")
+theme_override_font_sizes/font_size = 30
+text = "         Username"
+
+[node name="ProfilePlaceholder" type="Sprite2D" parent="TopButtons/ProfileContainer/ProfileButton"]
+position = Vector2(55, 63)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_6w7d7")
+
+[node name="SettignsContainer" type="MarginContainer" parent="TopButtons"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_constants/margin_left = 550
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="SettingsButton" type="Button" parent="TopButtons/SettignsContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme = ExtResource("1_bq8pk")
+icon = ExtResource("3_6w7d7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_top = 180.0
+offset_right = 1080.0
+offset_bottom = 1720.0
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Main Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 350
+theme_override_constants/margin_top = 500
+theme_override_constants/margin_right = 350
+theme_override_constants/margin_bottom = 100
+
+[node name="PlayButton" type="Button" parent="VBoxContainer/ButtonContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme = ExtResource("1_bq8pk")
+theme_override_font_sizes/font_size = 50
+text = "Play"
+
+[connection signal="pressed" from="VBoxContainer/ButtonContainer/PlayButton" to="." method="PlayButtonPressed"]
