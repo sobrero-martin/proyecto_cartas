@@ -1,4 +1,18 @@
-[gd_scene format=3 uid="uid://cfv0ln2234dsw"]
+[gd_scene load_steps=6 format=3 uid="uid://cfv0ln2234dsw"]
+
+[ext_resource type="Script" uid="uid://foapat4ud8k1" path="res://scripts/ShopMenu.cs" id="1_h5xv3"]
+[ext_resource type="Theme" uid="uid://boke32qs3bf4q" path="res://ui/themes/label_theme.tres" id="2_18737"]
+[ext_resource type="Theme" uid="uid://cqjecd71y6w2q" path="res://ui/themes/button_theme.tres" id="3_c1di8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h5xv3"]
+bg_color = Color(0.113665, 0.113665, 0.113665, 1)
+
+[sub_resource type="Theme" id="Theme_c1di8"]
+default_font_size = 40
+AcceptDialog/constants/buttons_separation = 0
+AcceptDialog/font_sizes/title_font_size = 30
+AcceptDialog/fonts/title_font = null
+AcceptDialog/styles/panel = null
 
 [node name="ShopMenu" type="Control"]
 layout_mode = 3
@@ -8,6 +22,7 @@ anchor_bottom = 1.0
 offset_bottom = -200.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_h5xv3")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(1080, 1720)
@@ -16,7 +31,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 color = Color(0.190762, 0.190762, 0.190762, 1)
 
-[node name="Label" type="Label" parent="."]
+[node name="ShopMenu" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -29,6 +44,17 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 75
 text = "SHOP"
 horizontal_alignment = 1
+
+[node name="monedas" type="Label" parent="."]
+layout_mode = 0
+offset_left = 935.0
+offset_top = 56.0
+offset_right = 1051.0
+offset_bottom = 94.0
+theme = ExtResource("2_18737")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxFlat_h5xv3")
+text = "X Pepes"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
@@ -55,9 +81,19 @@ theme_override_constants/separation = 60
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+[node name="Sobre1" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
 custom_minimum_size = Vector2(100, 500)
 layout_mode = 2
+
+[node name="InfoS1" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer/Sobre1"]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 1.0
+offset_right = 249.0
+offset_bottom = 44.0
+theme = ExtResource("3_c1di8")
+theme_override_font_sizes/font_size = 22
+text = "Info"
 
 [node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
 layout_mode = 2
@@ -65,18 +101,28 @@ theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 40
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer/MarginContainer2"]
+[node name="Button1" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer/MarginContainer2"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
+theme = ExtResource("3_c1di8")
 text = "COMPRAR"
 
 [node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_top = 50
 
-[node name="Panel2" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+[node name="Sobre4" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
 custom_minimum_size = Vector2(100, 500)
 layout_mode = 2
+
+[node name="InfoS4" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer/Sobre4"]
+offset_left = 193.0
+offset_top = 3.0
+offset_right = 247.0
+offset_bottom = 46.0
+theme = ExtResource("3_c1di8")
+theme_override_font_sizes/font_size = 22
+text = "Info"
 
 [node name="MarginContainer3" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
 layout_mode = 2
@@ -84,9 +130,10 @@ theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 40
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer/MarginContainer3"]
+[node name="Button4" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer/MarginContainer3"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
+theme = ExtResource("3_c1di8")
 text = "COMPRAR"
 
 [node name="MarginContainer4" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
@@ -97,9 +144,18 @@ theme_override_constants/margin_top = 50
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+[node name="Sobre2" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
 custom_minimum_size = Vector2(100, 500)
 layout_mode = 2
+
+[node name="InfoS2" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/Sobre2"]
+offset_left = 193.0
+offset_top = 3.0
+offset_right = 247.0
+offset_bottom = 46.0
+theme = ExtResource("3_c1di8")
+theme_override_font_sizes/font_size = 22
+text = "Info"
 
 [node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
 layout_mode = 2
@@ -107,18 +163,28 @@ theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 40
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/MarginContainer2"]
+[node name="Button2" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/MarginContainer2"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
+theme = ExtResource("3_c1di8")
 text = "COMPRAR"
 
 [node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
 layout_mode = 2
 theme_override_constants/margin_top = 50
 
-[node name="Panel2" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+[node name="Sobre5" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
 custom_minimum_size = Vector2(100, 500)
 layout_mode = 2
+
+[node name="InfoS5" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/Sobre5"]
+offset_left = 193.0
+offset_top = 3.0
+offset_right = 247.0
+offset_bottom = 46.0
+theme = ExtResource("3_c1di8")
+theme_override_font_sizes/font_size = 22
+text = "Info"
 
 [node name="MarginContainer3" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
 layout_mode = 2
@@ -126,9 +192,10 @@ theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 40
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/MarginContainer3"]
+[node name="Button5" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/MarginContainer3"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
+theme = ExtResource("3_c1di8")
 text = "COMPRAR"
 
 [node name="MarginContainer4" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
@@ -139,9 +206,18 @@ theme_override_constants/margin_top = 50
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3"]
+[node name="Sobre3" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3"]
 custom_minimum_size = Vector2(100, 500)
 layout_mode = 2
+
+[node name="InfoS3" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3/Sobre3"]
+offset_left = 193.0
+offset_top = 3.0
+offset_right = 247.0
+offset_bottom = 46.0
+theme = ExtResource("3_c1di8")
+theme_override_font_sizes/font_size = 22
+text = "Info"
 
 [node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3"]
 layout_mode = 2
@@ -149,18 +225,28 @@ theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 40
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3/MarginContainer2"]
+[node name="Button3" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3/MarginContainer2"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
+theme = ExtResource("3_c1di8")
 text = "COMPRAR"
 
 [node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3"]
 layout_mode = 2
 theme_override_constants/margin_top = 50
 
-[node name="Panel2" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3"]
+[node name="Sobre6" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3"]
 custom_minimum_size = Vector2(100, 500)
 layout_mode = 2
+
+[node name="InfoS6" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3/Sobre6"]
+offset_left = 193.0
+offset_top = 3.0
+offset_right = 247.0
+offset_bottom = 46.0
+theme = ExtResource("3_c1di8")
+theme_override_font_sizes/font_size = 22
+text = "Info"
 
 [node name="MarginContainer3" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3"]
 layout_mode = 2
@@ -168,9 +254,10 @@ theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 40
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3/MarginContainer3"]
+[node name="Button6" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3/MarginContainer3"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
+theme = ExtResource("3_c1di8")
 text = "COMPRAR"
 
 [node name="MarginContainer4" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3"]
@@ -185,9 +272,18 @@ theme_override_constants/separation = 60
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Sobre7" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(100, 500)
 layout_mode = 2
+
+[node name="InfoS7" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/Sobre7"]
+offset_left = 193.0
+offset_top = 3.0
+offset_right = 247.0
+offset_bottom = 46.0
+theme = ExtResource("3_c1di8")
+theme_override_font_sizes/font_size = 22
+text = "Info"
 
 [node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -195,31 +291,13 @@ theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 40
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/MarginContainer2"]
+[node name="Button7" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/MarginContainer2"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
+theme = ExtResource("3_c1di8")
 text = "COMPRAR"
 
 [node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_top = 50
-
-[node name="Panel2" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(100, 500)
-layout_mode = 2
-
-[node name="MarginContainer3" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 40
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 40
-
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/MarginContainer3"]
-custom_minimum_size = Vector2(0, 60)
-layout_mode = 2
-text = "COMPRAR"
-
-[node name="MarginContainer4" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_top = 50
 
@@ -227,9 +305,18 @@ theme_override_constants/margin_top = 50
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+[node name="Sobre8" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
 custom_minimum_size = Vector2(100, 500)
 layout_mode = 2
+
+[node name="InfoS8" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Sobre8"]
+offset_left = 193.0
+offset_top = 3.0
+offset_right = 247.0
+offset_bottom = 46.0
+theme = ExtResource("3_c1di8")
+theme_override_font_sizes/font_size = 22
+text = "Info"
 
 [node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
@@ -237,29 +324,15 @@ theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 40
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2/MarginContainer2"]
+[node name="Button8" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2/MarginContainer2"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
+theme = ExtResource("3_c1di8")
 text = "COMPRAR"
 
 [node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_constants/margin_top = 50
-
-[node name="Panel2" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
-custom_minimum_size = Vector2(100, 500)
-layout_mode = 2
-
-[node name="MarginContainer3" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
-layout_mode = 2
-theme_override_constants/margin_left = 40
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 40
-
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2/MarginContainer3"]
-custom_minimum_size = Vector2(0, 60)
-layout_mode = 2
-text = "COMPRAR"
 
 [node name="MarginContainer4" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
@@ -269,9 +342,18 @@ theme_override_constants/margin_top = 50
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+[node name="Sobre9" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
 custom_minimum_size = Vector2(100, 500)
 layout_mode = 2
+
+[node name="InfoS9" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3/Sobre9"]
+offset_left = 193.0
+offset_top = 3.0
+offset_right = 247.0
+offset_bottom = 46.0
+theme = ExtResource("3_c1di8")
+theme_override_font_sizes/font_size = 22
+text = "Info"
 
 [node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
@@ -279,30 +361,99 @@ theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 40
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3/MarginContainer2"]
+[node name="Button9" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3/MarginContainer2"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
+theme = ExtResource("3_c1di8")
 text = "COMPRAR"
 
-[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
-layout_mode = 2
-theme_override_constants/margin_top = 50
+[node name="VentanaInfo" type="AcceptDialog" parent="."]
+auto_translate_mode = 1
+title = "Info"
+initial_position = 3
+size = Vector2i(975, 162)
+current_screen = 0
+theme = SubResource("Theme_c1di8")
+dialog_text = "      Muestra porcentajes de aparición de las cartas"
 
-[node name="Panel2" type="Panel" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
-custom_minimum_size = Vector2(100, 500)
-layout_mode = 2
+[node name="VentanaInfo2" type="AcceptDialog" parent="."]
+auto_translate_mode = 1
+title = "Info"
+initial_position = 3
+size = Vector2i(975, 162)
+current_screen = 0
+theme = SubResource("Theme_c1di8")
+dialog_text = "      Muestra porcentajes de aparición de las cartas"
 
-[node name="MarginContainer3" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
-layout_mode = 2
-theme_override_constants/margin_left = 40
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 40
+[node name="VentanaInfo3" type="AcceptDialog" parent="."]
+auto_translate_mode = 1
+title = "Info"
+initial_position = 3
+size = Vector2i(975, 162)
+current_screen = 0
+theme = SubResource("Theme_c1di8")
+dialog_text = "      Muestra porcentajes de aparición de las cartas"
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3/MarginContainer3"]
-custom_minimum_size = Vector2(0, 60)
-layout_mode = 2
-text = "COMPRAR"
+[node name="VentanaInfo4" type="AcceptDialog" parent="."]
+auto_translate_mode = 1
+title = "Info"
+initial_position = 3
+size = Vector2i(975, 162)
+current_screen = 0
+theme = SubResource("Theme_c1di8")
+dialog_text = "      Muestra porcentajes de aparición de las cartas"
 
-[node name="MarginContainer4" type="MarginContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
-layout_mode = 2
-theme_override_constants/margin_top = 50
+[node name="VentanaInfo5" type="AcceptDialog" parent="."]
+auto_translate_mode = 1
+title = "Info"
+initial_position = 3
+size = Vector2i(975, 162)
+current_screen = 0
+theme = SubResource("Theme_c1di8")
+dialog_text = "      Muestra porcentajes de aparición de las cartas"
+
+[node name="VentanaInfo6" type="AcceptDialog" parent="."]
+auto_translate_mode = 1
+title = "Info"
+initial_position = 3
+size = Vector2i(975, 162)
+current_screen = 0
+theme = SubResource("Theme_c1di8")
+dialog_text = "      Muestra porcentajes de aparición de las cartas"
+
+[node name="VentanaInfo7" type="AcceptDialog" parent="."]
+auto_translate_mode = 1
+title = "Info"
+initial_position = 3
+size = Vector2i(975, 162)
+current_screen = 0
+theme = SubResource("Theme_c1di8")
+dialog_text = "      Muestra porcentajes de aparición de las cartas"
+
+[node name="VentanaInfo8" type="AcceptDialog" parent="."]
+auto_translate_mode = 1
+title = "Info"
+initial_position = 3
+size = Vector2i(975, 162)
+current_screen = 0
+theme = SubResource("Theme_c1di8")
+dialog_text = "      Muestra porcentajes de aparición de las cartas"
+
+[node name="VentanaInfo9" type="AcceptDialog" parent="."]
+auto_translate_mode = 1
+title = "Info"
+initial_position = 3
+size = Vector2i(975, 162)
+current_screen = 0
+theme = SubResource("Theme_c1di8")
+dialog_text = "      Muestra porcentajes de aparición de las cartas"
+
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer/Sobre1/InfoS1" to="." method="OnButtonPressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer/Sobre4/InfoS4" to="." method="OnButton4Pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/Sobre2/InfoS2" to="." method="OnButton2Pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/Sobre5/InfoS5" to="." method="OnButton5Pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3/Sobre3/InfoS3" to="." method="OnButton3Pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3/Sobre6/InfoS6" to="." method="OnButton6Pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer/Sobre7/InfoS7" to="." method="OnButton7Pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Sobre8/InfoS8" to="." method="OnButton8Pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer3/Sobre9/InfoS9" to="." method="OnButton9Pressed"]
