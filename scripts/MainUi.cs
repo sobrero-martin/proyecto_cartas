@@ -30,7 +30,7 @@ public partial class MainUi : Control
 	
 	private void ButtonInvPressed(){
 		GD.Print("This is ButtonInv");
-		
+		SwitchMenu(lastMenu, "InvMenu");
 	}
 	
 	private void ButtonFriendsPressed(){
