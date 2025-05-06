@@ -3,5 +3,5 @@
 [ext_resource type="FontFile" uid="uid://b0ab0kqis53t2" path="res://font/FONT.otf" id="1_uuhkk"]
 
 [resource]
-Label/colors/font_color = Color(0.605043, 0.220324, 0.369679, 1)
+Label/colors/font_color = Color(0.881972, 0.926665, 0.938069, 1)
 Label/fonts/font = ExtResource("1_uuhkk")
